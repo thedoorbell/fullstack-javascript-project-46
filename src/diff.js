@@ -9,13 +9,16 @@ const diff = (data1, data2) => {
   const result = sortedKeys.reduce((acc, key) => {
     if (!Object.hasOwn(data1, key)) {
       return `${acc}  + ${key}: ${data2[key]}\n`
-    } else if (!Object.hasOwn(data2, key)) {
+    }
+    else if (!Object.hasOwn(data2, key)) {
       return `${acc}  - ${key}: ${data1[key]}\n`
-    } else if (data1[key] !== data2[key]) {
+    }
+    else if (data1[key] !== data2[key]) {
       acc += `  - ${key}: ${data1[key]}\n`
       acc += `  + ${key}: ${data2[key]}\n`
       return acc
-    } else {
+    }
+    else {
       return `${acc}    ${key}: ${data1[key]}\n`
     }
   }, '')

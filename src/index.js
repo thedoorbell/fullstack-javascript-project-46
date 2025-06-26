@@ -16,7 +16,8 @@ const genDiff = (filepath1, filepath2, formatName = 'stylish') => {
 
     const result = diff(data1, data2, formatName)
     return result
-  } catch (error) {
+  }
+  catch (error) {
     console.error(`Error: ${error.message}`)
     process.exit(1)
   }
