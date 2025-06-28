@@ -1,5 +1,5 @@
 import path from 'path'
-import parse from './parsedata.js'
+import parse from './parsers.js'
 import diff from './diff.js'
 
 const getAbsolutePath = (filepath) => {
