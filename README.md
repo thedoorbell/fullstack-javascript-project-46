@@ -8,7 +8,7 @@ Linux, MacOS or Windows (WSL)
 
 ### plain JSONs comparison demo run
 
-[![asciicast](https://asciinema.org/a/crfwLJuBsswwcjC90ZmKNkxMj.svg)](https://asciinema.org/a/crfwLJuBsswwcjC90ZmKNkxMj)
+[![asciicast](https://asciinema.org/a/oLop8jODDF5H8VNoX2ab2IVB0.svg)](https://asciinema.org/a/oLop8jODDF5H8VNoX2ab2IVB0)
 
 ### Hexlet tests and linter status:
 
