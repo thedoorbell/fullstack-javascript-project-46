@@ -1,10 +1,9 @@
 import path from 'path'
 import parse from './parsers.js'
 import diff from './diff.js'
+import format from './formatter.js'
 
-const getAbsolutePath = (filepath) => {
-  return path.resolve(process.cwd(), filepath)
-}
+const getAbsolutePath = filepath => path.resolve(process.cwd(), filepath)
 
 const genDiff = (filepath1, filepath2, formatName = 'stylish') => {
   const absPath1 = getAbsolutePath(filepath1)
@@ -13,8 +12,9 @@ const genDiff = (filepath1, filepath2, formatName = 'stylish') => {
   try {
     const data1 = parse(absPath1)
     const data2 = parse(absPath2)
+    const diffTree = diff(data1, data2)
+    const result = format(diffTree, formatName)
 
-    const result = diff(data1, data2, formatName)
     return result
   }
   catch (error) {

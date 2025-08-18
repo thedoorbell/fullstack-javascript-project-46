@@ -13,7 +13,7 @@ const parse = (path) => {
     return yaml.load(data)
   }
 
-  throw new Error(`Unsupported file format - ${ext}`)
+  throw new Error(`Unsupported file format: ${ext}`)
 }
 
 export default parse

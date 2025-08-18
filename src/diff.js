@@ -1,31 +1,29 @@
 import _ from 'lodash'
 
-const diff = (data1, data2, formatName) => {
+const diff = (data1, data2) => {
   const keys1 = Object.keys(data1)
   const keys2 = Object.keys(data2)
   const keys = _.union(keys1, keys2)
   const sortedKeys = _.sortBy(keys)
 
-  if (formatName === 'stylish') {
-    const result = sortedKeys.reduce((acc, key) => {
-      if (!Object.hasOwn(data1, key)) {
-        return `${acc}  + ${key}: ${data2[key]}\n`
+  return sortedKeys.map((key) => {
+    if (!Object.hasOwn(data1, key)) {
+      return { key, value: data2[key], type: 'added' }
+    }
+    if (!Object.hasOwn(data2, key)) {
+      return { key, value: data1[key], type: 'removed' }
+    }
+    if (_.isObject(data1[key]) && _.isObject(data2[key])) {
+      if (_.isEqual(data1[key], data2[key])) {
+        return { key, value: data1[key], type: 'unchanged' }
       }
-      else if (!Object.hasOwn(data2, key)) {
-        return `${acc}  - ${key}: ${data1[key]}\n`
-      }
-      else if (data1[key] !== data2[key]) {
-        acc += `  - ${key}: ${data1[key]}\n`
-        acc += `  + ${key}: ${data2[key]}\n`
-        return acc
-      }
-      else {
-        return `${acc}    ${key}: ${data1[key]}\n`
-      }
-    }, '')
-
-    return `{\n${result}}`
-  }
+      return { key, children: diff(data1[key], data2[key]), type: 'nested' }
+    }
+    if (data1[key] !== data2[key]) {
+      return { key, oldValue: data1[key], newValue: data2[key], type: 'changed' }
+    }
+    return { key, value: data1[key], type: 'unchanged' }
+  })
 }
 
 export default diff
