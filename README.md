@@ -10,6 +10,10 @@ Linux, MacOS or Windows (WSL)
 
 [![asciicast](https://asciinema.org/a/oLop8jODDF5H8VNoX2ab2IVB0.svg)](https://asciinema.org/a/oLop8jODDF5H8VNoX2ab2IVB0)
 
+### nested JSONs comparison demo run
+
+[![asciicast](https://asciinema.org/a/Sf6fcScqZAddmxlscKgcAAVaT.svg)](https://asciinema.org/a/Sf6fcScqZAddmxlscKgcAAVaT)
+
 ### Hexlet tests and linter status:
 
 [![Actions Status](https://github.com/thedoorbell/fullstack-javascript-project-46/actions/workflows/hexlet-check.yml/badge.svg)](https://github.com/thedoorbell/fullstack-javascript-project-46/actions) [![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=thedoorbell_fullstack-javascript-project-46&metric=alert_status)](https://sonarcloud.io/summary/new_code?id=thedoorbell_fullstack-javascript-project-46) [![Coverage](https://sonarcloud.io/api/project_badges/measure?project=thedoorbell_fullstack-javascript-project-46&metric=coverage)](https://sonarcloud.io/summary/new_code?id=thedoorbell_fullstack-javascript-project-46)
