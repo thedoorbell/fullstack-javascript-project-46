@@ -17,6 +17,7 @@ const formatValue = (value, depth) => {
 const formatStylish = (tree, depth = 1) => {
   const indent = '    '.repeat(depth - 1)
   const signIndent = sign => `${indent}  ${sign} `
+
   const lines = tree.map((node) => {
     switch (node.type) {
       case 'added':
@@ -40,13 +41,4 @@ const formatStylish = (tree, depth = 1) => {
   return `{\n${lines.join('\n')}\n${indent}}`
 }
 
-const format = (tree, formatName) => {
-  switch (formatName) {
-    case 'stylish':
-      return formatStylish(tree)
-    default:
-      throw new Error(`Unknown format: ${formatName}`)
-  }
-}
-
-export default format
+export default formatStylish

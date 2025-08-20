@@ -1,7 +1,7 @@
 import path from 'path'
 import parse from './parsers.js'
 import diff from './diff.js'
-import format from './formatter.js'
+import format from '../formatters/index.js'
 
 const getAbsolutePath = filepath => path.resolve(process.cwd(), filepath)
 
