@@ -6,13 +6,9 @@
 
 Linux, MacOS or Windows (WSL)
 
-### plain JSONs comparison demo run
+### genDiff utility demo run
 
-[![asciicast](https://asciinema.org/a/oLop8jODDF5H8VNoX2ab2IVB0.svg)](https://asciinema.org/a/oLop8jODDF5H8VNoX2ab2IVB0)
-
-### nested JSONs comparison demo run
-
-[![asciicast](https://asciinema.org/a/Sf6fcScqZAddmxlscKgcAAVaT.svg)](https://asciinema.org/a/Sf6fcScqZAddmxlscKgcAAVaT)
+[![asciicast](https://asciinema.org/a/pTgPQfZaEwF10mLldwNSTPWxu.svg)](https://asciinema.org/a/pTgPQfZaEwF10mLldwNSTPWxu)
 
 ### Hexlet tests and linter status:
 
