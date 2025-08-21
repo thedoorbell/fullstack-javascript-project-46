@@ -8,7 +8,7 @@ Linux, MacOS or Windows (WSL)
 
 ### genDiff utility demo run
 
-[![asciicast](https://asciinema.org/a/pTgPQfZaEwF10mLldwNSTPWxu.svg)](https://asciinema.org/a/pTgPQfZaEwF10mLldwNSTPWxu)
+[![asciicast](https://asciinema.org/a/LyRrhypTNQ67Ve5ez1yWdXb8U.svg)](https://asciinema.org/a/LyRrhypTNQ67Ve5ez1yWdXb8U)
 
 ### Hexlet tests and linter status:
 
