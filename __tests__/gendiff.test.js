@@ -17,8 +17,10 @@ test('Compare everything!', () => {
 
   const expectedStylish = readFile('expected1.txt')
   const expectedPlain = readFile('expected2.txt')
+  const expectedJson = readFile('expected3.json')
 
   expect(genDiff(json1, json2)).toBe(expectedStylish)
   expect(genDiff(yaml1, yaml2)).toBe(expectedStylish)
   expect(genDiff(json1, json2, 'plain')).toBe(expectedPlain)
+  expect(genDiff(json1, json2, 'json')).toBe(expectedJson)
 })
