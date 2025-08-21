@@ -7,6 +7,7 @@ const formatValue = (value, depth) => {
 
   const indent = '    '.repeat(depth + 1)
   const bracketIndent = '    '.repeat(depth)
+
   const lines = Object
     .entries(value)
     .map(([key, val]) => `${indent}${key}: ${formatValue(val, depth + 1)}`)
