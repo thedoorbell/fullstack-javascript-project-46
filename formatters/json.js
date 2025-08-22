@@ -1,5 +1,3 @@
-import _ from 'lodash'
-
 const buildJson = tree => Object.fromEntries(
   tree.map((node) => {
     switch (node.type) {
