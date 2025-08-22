@@ -2,7 +2,7 @@ import _ from 'lodash'
 
 const formatValue = (value) => {
   if (!_.isObject(value)) {
-    return _.isBoolean(value) || _.isNull(value) || _.isNumber ? value : `'${value}'`
+    return _.isBoolean(value) || _.isNull(value) ? value : `'${value}'`
   }
 
   return '[complex value]'
