@@ -1,11 +1,6 @@
-import fs from 'fs'
 import yaml from 'js-yaml'
-import { extname } from 'path'
 
-const parse = (path) => {
-  const data = fs.readFileSync(path)
-  const ext = extname(path)
-
+const parse = (data, ext) => {
   if (ext === '.json') {
     return JSON.parse(data)
   }

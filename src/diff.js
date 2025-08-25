@@ -13,7 +13,7 @@ const diff = (data1, data2) => {
     if (!Object.hasOwn(data2, key)) {
       return { key, value: data1[key], type: 'removed' }
     }
-    if (_.isObject(data1[key]) && _.isObject(data2[key])) {
+    if (_.isPlainObject(data1[key]) && _.isPlainObject(data2[key])) {
       if (_.isEqual(data1[key], data2[key])) {
         return { key, value: data1[key], type: 'unchanged' }
       }
