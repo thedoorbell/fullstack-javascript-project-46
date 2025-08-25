@@ -1,6 +1,2 @@
 /node_modules/
 coverage
-.npmrc
-hexlet-code-1.0.0.tgz
-jest.config.js
-sonar-project.properties

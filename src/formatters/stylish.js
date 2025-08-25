@@ -1,12 +1,14 @@
 import _ from 'lodash'
 
+const setIndent = depth => '    '.repeat(depth)
+
 const formatValue = (value, depth) => {
   if (!_.isObject(value)) {
     return `${value}`
   }
 
-  const indent = '    '.repeat(depth + 1)
-  const bracketIndent = '    '.repeat(depth)
+  const indent = setIndent(depth + 1)
+  const bracketIndent = setIndent(depth)
 
   const lines = Object
     .entries(value)
@@ -16,7 +18,7 @@ const formatValue = (value, depth) => {
 }
 
 const formatStylish = (tree, depth = 1) => {
-  const indent = '    '.repeat(depth - 1)
+  const indent = setIndent(depth - 1)
   const signIndent = sign => `${indent}  ${sign} `
 
   const lines = tree.map((node) => {
